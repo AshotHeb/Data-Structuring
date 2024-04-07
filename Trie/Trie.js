@@ -91,4 +91,4 @@ class Trie {
 const trie = new Trie();
 
 trie.insert("hello");
-console.log("root", trie.root);
+// console.log("root", trie.root);

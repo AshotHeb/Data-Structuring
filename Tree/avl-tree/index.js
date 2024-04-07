@@ -54,14 +54,12 @@ class AVLTree {
 
     // Left Right Case
     if (balance > 1 && value > node.left.value) {
-      node.left = this._leftRotate(node.left);
-      return this._rightRotate(node);
+      return this._leftRightRotate(node);
     }
 
     // Right Left Case
     if (balance < -1 && value < node.right.value) {
-      node.right = this._rightRotate(node.right);
-      return this._leftRotate(node);
+      return this._rightLeftRotate(node);
     }
 
     // Return the (unchanged) node pointer
@@ -102,6 +100,23 @@ class AVLTree {
 
     // Return new root
     return y;
+  }
+
+  // Method to perform left-right rotation
+  _leftRightRotate(node) {
+    // First perform left rotation on the left child
+    node.left = this._leftRotate(node.left);
+
+    // Then perform right rotation on the node and return it
+    return this._rightRotate(node);
+  }
+
+  _rightLeftRotate(node) {
+    // First perform right rotation on the right child
+    node.right = this._rightRotate(node.right);
+
+    // Then perform left rotation on the node and return it
+    return this._leftRotate(node);
   }
 
   // Get height of node
