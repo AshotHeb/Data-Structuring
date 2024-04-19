@@ -110,4 +110,4 @@ export class RedBlackTree {
 
 const redBlackTree = new RedBlackTree();
 redBlackTree.insert(10);
-console.log("🚀 ~ redBlackTree:", redBlackTree);
+// console.log("🚀 ~ redBlackTree:", redBlackTree);
