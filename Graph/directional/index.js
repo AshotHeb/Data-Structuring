@@ -61,6 +61,6 @@ directedGraph.addVertex("C");
 directedGraph.addEdge("A", "B", 10);
 directedGraph.addEdge("A", "C", 15);
 
-directedGraph.display();
+// directedGraph.display();
 
 // console.log("Min weight of A:", directedGraph.getClosestVertex("A"));
